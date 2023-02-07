@@ -1,6 +1,6 @@
 import boto3
 
-cf_client = boto3.client('cloudformation', region_name='us-west-1')
+cf_client = boto3.client('cloudformation', region_name='us-east-1')
 
 template_body = """
 ---
