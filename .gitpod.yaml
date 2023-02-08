@@ -1,3 +1,5 @@
+image: gitpod/workspace
+
 env:
   CURRENT_VERSION: $(curl -Ls https://api.github.com/repos/Versent/saml2aws/releases/latest | grep 'tag_name' | cut -d'v' -f2 | cut -d'"' -f1)
 
