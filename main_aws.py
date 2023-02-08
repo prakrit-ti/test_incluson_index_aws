@@ -9,30 +9,10 @@ Resources:
   MyBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: s3-demo-bucket
-    Tags:
-      - Key: Owner
-        Value: prakrit.raj@trilogy.com
-      - Key: Project
-        Value: Inclusion Index
-      - Key: Quarter
-        Value: Q1-2023
+      BucketName: s3-bucket-prti
 """
+
 cf_client.create_stack(
-    StackName='s3-demo-stack',
-    TemplateBody=template_body,
-    Tags=[
-        {
-            'Key': 'Owner',
-            'Value': 'prakrit.raj@trilogy.com'
-        },
-        {
-            'Key': 'Project',
-            'Value': 'Inclusion Index'
-        },
-        {
-            'Key': 'Quarter',
-            'Value': 'Q1-2023'
-        }
-    ]
+    StackName='demo-stack-prti',
+    TemplateBody=template_body
 )
